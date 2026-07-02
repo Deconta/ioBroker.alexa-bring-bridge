@@ -8,6 +8,8 @@
 The **alexa-bring-bridge** adapter is a clever, fully automatic bridge between Amazon Alexa and your Bring! shopping list.
 It intercepts everything you dictate to Alexa, intelligently filters and cleans the inputs, adds them to your Bring! list, and then fully automatically deletes them from your Alexa list on Amazon in the background.
 
+> ⚠️ **Note:** The text parsing and filtering engine of this adapter is currently highly optimized for the **German** language (recognizing German numbers, fractions, packaging units, and trigger words). While basic forwarding might work in other languages, the advanced features require German voice commands.
+
 ## 📦 Requirements
 
 Before you can use this adapter, the following adapters must be installed and configured in your ioBroker:
@@ -52,14 +54,14 @@ Every text transformation and filtering is individually secured. If Alexa's spee
 ### 💤 Resource Friendly
 No permanent JSON polling in the background. The adapter only triggers when you actually announce something via Alexa.
 
-## 🗣️ Example Sentences
+## 🗣️ Example Sentences (German)
 
-To give you an idea of what's possible, here are a few sentences you can say to Alexa:
-- *"Alexa, put milk on the shopping list"* ➔ **Milk**
-- *"Alexa, add three crates of water"* ➔ **Water (3 crates)**
-- *"Alexa, put half a kilo of minced meat on the list"* ➔ **Minced meat (0.5 kg)**
-- *"Alexa, put apples and bananas on the shopping list"* ➔ **Apples**, **Bananas**
-- *"Alexa, write two hundred fifty grams of butter on the list"* ➔ **Butter (250 g)**
+To give you an idea of what's possible, here are a few sentences you can say to Alexa (in German):
+- *"Alexa, setze Milch auf die Einkaufsliste"* ➔ **Milch**
+- *"Alexa, füge drei Kisten Wasser hinzu"* ➔ **Wasser (3 Kisten)**
+- *"Alexa, packe ein halbes Kilo Hackfleisch auf die Liste"* ➔ **Hackfleisch (0.5 kg)**
+- *"Alexa, setze Äpfel und Bananen auf die Einkaufsliste"* ➔ **Äpfel**, **Bananen**
+- *"Alexa, schreibe zwei hundert fünfzig gramm butter auf die Liste"* ➔ **Butter (250 g)**
 
 ## ⚙️ Principle & Process
 
