@@ -1,6 +1,8 @@
 ![Logo](admin/alexa-bring-bridge.png)
 # ioBroker.alexa-bring-bridge
 
+🇩🇪 **[Hier klicken für die deutsche Anleitung / Click here for the German README](README_de.md)**
+
 ## alexa-bring-bridge adapter for ioBroker
 
 The **alexa-bring-bridge** adapter is a clever, fully automatic bridge between Amazon Alexa and your Bring! shopping list.
