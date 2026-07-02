@@ -8,7 +8,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.alexa-bring-bridge.png?downloads=true)](https://nodei.co/npm/iobroker.alexa-bring-bridge/)
 
-**Tests:** ![Test and Release](https://github.com/julian/ioBroker.alexa-bring-bridge/workflows/Test%20and%20Release/badge.svg)
+**Tests:** ![Test and Release](https://github.com/Deconta/ioBroker.alexa-bring-bridge/workflows/Test%20and%20Release/badge.svg)
 
 ## alexa-bring-bridge Adapter für ioBroker
 
@@ -72,9 +72,9 @@ Weil die Amazon-Cloud oft ein paar Sekunden braucht, um das JSON im ioBroker zu 
 
 ## Änderungen (Changelog)
 ### **IN ARBEIT (WORK IN PROGRESS)**
-* (Julian) Erstveröffentlichung (initial release)
+* (Deconta) Erstveröffentlichung (initial release)
 
 ## Lizenz (License)
 MIT License
 
-Copyright (c) 2026 Julian <julian@example.com>
+Copyright (c) 2026 Deconta <Deconta@example.com>

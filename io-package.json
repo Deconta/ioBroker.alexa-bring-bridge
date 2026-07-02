@@ -44,7 +44,7 @@
             "zh-cn": "Alexa 带来桥"
         },
         "authors": [
-            "Julian <julian@example.com>"
+            "Deconta <Deconta@example.com>"
         ],
         "keywords": [
             "template",
@@ -59,8 +59,8 @@
         "platform": "Javascript/Node.js",
         "icon": "alexa-bring-bridge.png",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/julian/ioBroker.alexa-bring-bridge/main/admin/alexa-bring-bridge.png",
-        "readme": "https://github.com/julian/ioBroker.alexa-bring-bridge/blob/main/README.md",
+        "extIcon": "https://raw.githubusercontent.com/Deconta/ioBroker.alexa-bring-bridge/main/admin/alexa-bring-bridge.png",
+        "readme": "https://github.com/Deconta/ioBroker.alexa-bring-bridge/blob/main/README.md",
         "loglevel": "info",
         "tier": 3,
         "mode": "daemon",
