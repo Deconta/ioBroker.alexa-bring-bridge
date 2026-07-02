@@ -1,9 +1,35 @@
 {
     "common": {
         "name": "alexa-bring-bridge",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "news": {
             "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            },
+            "0.0.7": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            },
+            "0.0.8": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",
                 "ru": "Начальная версия",
@@ -72,13 +98,18 @@
         "dependencies": [
             {
                 "js-controller": ">=6.0.11"
+            },
+            {
+                "admin": ">= 7.6.17"
             }
         ],
         "globalDependencies": [
             {
                 "admin": ">=7.0.23"
             }
-        ]
+        ],
+        "connectionType": "cloud",
+        "dataSource": "push"
     },
     "native": {
         "bringBaseId": "bring.0.d0ded82a-de03-49e0-b64b-5574c3e34fbc",

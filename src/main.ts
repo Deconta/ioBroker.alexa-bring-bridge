@@ -1,7 +1,7 @@
 import * as utils from '@iobroker/adapter-core';
 
 class AlexaBringBridge extends utils.Adapter {
-    private activeTimeouts: NodeJS.Timeout[] = [];
+    private activeTimeouts: ioBroker.Timeout[] = [];
 
     public constructor(options: Partial<utils.AdapterOptions> = {}) {
         super({
@@ -36,7 +36,7 @@ class AlexaBringBridge extends utils.Adapter {
 
     private onUnload(callback: () => void): void {
         try {
-            this.activeTimeouts.forEach(timer => clearTimeout(timer));
+            this.activeTimeouts.forEach(timer => this.clearTimeout(timer));
             this.activeTimeouts = [];
             this.log.info('Adapter stopped. All active timeouts cleared.');
             callback();
@@ -154,7 +154,7 @@ class AlexaBringBridge extends utils.Adapter {
 
                             const processingDelay = index * 1500;
 
-                            const processTimer = setTimeout(async () => {
+                            const processTimer = this.setTimeout(async () => {
                                 this.customDebug(
                                     `[Item ${index + 1}/${itemsToProcess.length}] Raw: "${originalItemName}" -> Bring!: "${finalItemNameToBring}".`,
                                 );
@@ -162,7 +162,7 @@ class AlexaBringBridge extends utils.Adapter {
                                 const bringAddItemStateId = `${this.config.bringBaseId}.saveItem`;
                                 await this.setForeignStateAsync(bringAddItemStateId, finalItemNameToBring, false);
 
-                                const deleteTimer = setTimeout(() => {
+                                const deleteTimer = this.setTimeout(() => {
                                     void this.removeItemFromAlexaList(originalItemName, cleanResult.product);
                                 }, 4000);
                                 this.activeTimeouts.push(deleteTimer);
@@ -420,7 +420,7 @@ class AlexaBringBridge extends utils.Adapter {
             if (!listState || !listState.val) {
                 this.log.debug('Alexa shopping list JSON is empty. Waiting for adapter update...');
                 if (attempt < maxAttempts) {
-                    const timer = setTimeout(
+                    const timer = this.setTimeout(
                         () => this.removeItemFromAlexaList(itemName, extractedProduct, attempt + 1),
                         retryDelay,
                     );
@@ -461,7 +461,7 @@ class AlexaBringBridge extends utils.Adapter {
                     this.log.debug(
                         `Item "${cleanedAlexaName}" / "${extractedProduct}" not found in JSON yet. Cloud syncing... Retrying in 3 sec.`,
                     );
-                    const timer = setTimeout(
+                    const timer = this.setTimeout(
                         () => this.removeItemFromAlexaList(itemName, extractedProduct, attempt + 1),
                         retryDelay,
                     );

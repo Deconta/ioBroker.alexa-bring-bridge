@@ -11,12 +11,20 @@
                     "type": "header",
                     "text": "1. Bring! Integration",
                     "size": 4,
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "descBring": {
                     "type": "staticText",
                     "text": "Wähle hier die Hauptliste (UUID-Ordner) deiner Bring-Instanz, auf die die Artikel geschrieben werden sollen.",
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "bringBaseId": {
                     "type": "objectId",
@@ -24,7 +32,9 @@
                     "newLine": true,
                     "xs": 12,
                     "sm": 12,
-                    "md": 6
+                    "md": 6,
+                    "lg": 6,
+                    "xl": 4
                 },
                 "divider1": {
                     "type": "divider",
@@ -38,12 +48,20 @@
                     "type": "header",
                     "text": "2. Amazon Alexa Schnittstelle",
                     "size": 4,
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "descAlexa": {
                     "type": "staticText",
                     "text": "Diese IDs verknüpfen den Adapter mit dem Alexa2-Adapter, um neue Einkäufe abzufangen.",
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "alexa2BaseId": {
                     "type": "objectId",
@@ -52,7 +70,9 @@
                     "xs": 12,
                     "sm": 12,
                     "md": 6,
-                    "help": "Der Ordner deiner Alexa-Einkaufsliste (z.B. alexa2.0.Lists.SHOP)"
+                    "help": "Der Ordner deiner Alexa-Einkaufsliste (z.B. alexa2.0.Lists.SHOP)",
+                    "lg": 6,
+                    "xl": 4
                 },
                 "alexaHistorySummaryId": {
                     "type": "objectId",
@@ -61,7 +81,9 @@
                     "xs": 12,
                     "sm": 12,
                     "md": 6,
-                    "help": "Der Datenpunkt für den gesprochenen Text (z.B. alexa2.0.History.summary)"
+                    "help": "Der Datenpunkt für den gesprochenen Text (z.B. alexa2.0.History.summary)",
+                    "lg": 6,
+                    "xl": 4
                 },
                 "alexaHistoryAnswerId": {
                     "type": "objectId",
@@ -70,7 +92,9 @@
                     "xs": 12,
                     "sm": 12,
                     "md": 6,
-                    "help": "Der Datenpunkt für die Alexa-Antwort (z.B. alexa2.0.History.answerText)"
+                    "help": "Der Datenpunkt für die Alexa-Antwort (z.B. alexa2.0.History.answerText)",
+                    "lg": 6,
+                    "xl": 4
                 },
                 "alexaHistorySerialId": {
                     "type": "objectId",
@@ -79,7 +103,9 @@
                     "xs": 12,
                     "sm": 12,
                     "md": 6,
-                    "help": "Der Datenpunkt für die Seriennummer des angesprochenen Echos (z.B. alexa2.0.History.serialNumber)"
+                    "help": "Der Datenpunkt für die Seriennummer des angesprochenen Echos (z.B. alexa2.0.History.serialNumber)",
+                    "lg": 6,
+                    "xl": 4
                 }
             }
         },
@@ -91,7 +117,11 @@
                     "type": "header",
                     "text": "Rezept-Auflösung",
                     "size": 4,
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "descRecipes": {
                     "type": "staticText",
@@ -99,7 +129,11 @@
                     "style": {
                         "marginBottom": "20px"
                     },
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "recipesList": {
                     "type": "table",
@@ -127,7 +161,11 @@
                     "type": "header",
                     "text": "1. Synonyme (Wörter ersetzen)",
                     "size": 4,
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "descSynonyms": {
                     "type": "staticText",
@@ -135,7 +173,11 @@
                     "style": {
                         "marginBottom": "10px"
                     },
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "synonymsList": {
                     "type": "table",
@@ -164,12 +206,20 @@
                     "type": "header",
                     "text": "Diagnose & Fehlersuche",
                     "size": 4,
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "descLog": {
                     "type": "staticText",
                     "text": "Hier kannst du erweiterte Logs aktivieren, wenn du überprüfen willst, was der Adapter genau tut.",
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 },
                 "enableDebug": {
                     "type": "checkbox",

@@ -1,89 +1,80 @@
 ![Logo](admin/alexa-bring-bridge.png)
 # ioBroker.alexa-bring-bridge
 
+## alexa-bring-bridge adapter for ioBroker
 
+The **alexa-bring-bridge** adapter is a clever, fully automatic bridge between Amazon Alexa and your Bring! shopping list.
+It intercepts everything you dictate to Alexa, intelligently filters and cleans the inputs, adds them to your Bring! list, and then fully automatically deletes them from your Alexa list on Amazon in the background.
 
-## alexa-bring-bridge Adapter für ioBroker
+## 📦 Requirements
 
-Der **alexa-bring-bridge** Adapter ist eine clevere, vollautomatische Brücke zwischen Amazon Alexa und deiner Bring! Einkaufsliste. 
-Er fängt alles ab, was du Alexa diktierst, filtert und säubert die Eingaben intelligent, fügt sie auf deiner Bring! Liste hinzu und löscht sie anschließend vollautomatisch wieder im Hintergrund von deiner Alexa-Liste auf Amazon.
+Before you can use this adapter, the following adapters must be installed and configured in your ioBroker:
+1. **[Alexa2 Adapter](https://github.com/Apollon77/ioBroker.alexa2):** Fully set up and connected to your Amazon account.
+2. **[Bring! Adapter](https://github.com/foxriver76/ioBroker.bring):** Fully set up and connected to your Bring! account.
 
-## 📦 Voraussetzungen
+## 🌟 Features
 
-Bevor du diesen Adapter nutzen kannst, müssen folgende Adapter in deinem ioBroker installiert und konfiguriert sein:
-1. **[Alexa2 Adapter](https://github.com/Apollon77/ioBroker.alexa2):** Vollständig eingerichtet und mit deinem Amazon-Konto verbunden.
-2. **[Bring! Adapter](https://github.com/foxriver76/ioBroker.bring):** Vollständig eingerichtet und mit deinem Bring!-Konto verbunden.
+### 🚀 Multi-Item Support (Bulk Shopping)
+If you say, e.g., *"Alexa, add apples and bananas"*, the adapter automatically splits the sentence at every "and". It sends **separate items** to Bring! and also deletes them individually from Alexa.
 
-## 🛠️ Installation (Beta via GitHub)
+### 🧮 Intelligent Quantity Adder
+If you already have *"2 bottles of beer"* on your list and later say *"Put two bottles of beer on the list"*, the adapter reads the current Bring list and adds them up ➔ **"Beer, 4 bottles"** ends up in the app!
 
-Da der Adapter ganz neu ist, kannst du ihn aktuell direkt hier über GitHub installieren:
+### 📦 Huge Packaging Dictionary
+The filter recognizes countless household units such as packs, cans, jars, rolls, tubes, crates, and cartons.
 
-1. Öffne die ioBroker-Oberfläche und gehe zum Reiter **"Adapter"**.
-2. Klicke oben auf das **GitHub-Symbol** (Installieren aus eigener URL / Install from custom URL).
-3. Wähle im Tab "Benutzerdefiniert" (Custom) aus.
-4. Trage bei URL diesen Link ein: `https://github.com/Deconta/ioBroker.alexa-bring-bridge`
-5. Klicke auf **Installieren**.
-6. Nach der Installation klickst du auf **Instanz hinzufügen** (das dicke Plus).
-7. Konfiguriere die Instanz, indem du im Einstellungsmenü die entsprechenden Bring- und Alexa-Datenpunkte über das kleine Listen-Icon bequem auswählst.
+### ⏱️ Anti-Swallow Guarantee (Staggering)
+If multiple items are announced simultaneously, the script now sends them to Bring with a 1.5-second interval. This guarantees nothing gets lost.
 
-## 🌟 Funktionen
+### 🛠️ Polish & Bugfixes
+The script now reacts to repeated, identical sentences, recognizes trigger words like "add", and cleanly clears hanging cloud wait loops upon adapter restart.
 
-### 🚀 Multi-Item-Support (Großeinkäufe)
-Sagt ihr z. B. *"Alexa, füge Äpfel und Bananen hinzu"*, zerschneidet der Adapter den Satz ab sofort automatisch bei jedem "und". Er schickt **getrennte Artikel** an Bring! und löscht auch alle einzeln bei Alexa.
+### 🍳 Recipe Resolution (NEW)
+You can store your favorite recipes in the settings (e.g., "cake"). If you say *"Alexa, put cake on the shopping list"*, the stored ingredients (e.g., flour, eggs, sugar) are automatically added to your list.
 
-### 🧮 Intelligenter Mengen-Addierer
-Wenn ihr schon *"2 Flaschen Bier"* auf der Liste habt und später *"Schreibe zwei Flaschen Bier auf die Liste"* sagt, liest der Adapter die aktuelle Bring-Liste aus und rechnet zusammen ➔ Es landen **"Bier, 4 Flaschen"** in der App!
+### 🚫 Expert Filter: Synonyms (NEW)
+- **Synonyms:** Invisibly swaps your colloquial terms (e.g., "Zewa") for Bring-compatible terms (e.g., "paper towels") so the correct icon appears.
 
-### 📦 Riesiges Verpackungs-Wörterbuch
-Der Filter erkennt unzählige Haushalts-Einheiten wie Packungen, Dosen, Gläser, Rollen, Tuben, Kisten und Kartons.
+### 🧠 Mathematical Total Number Parser & Fractions
+Turns spoken words into real numbers. The logic also supports complex, compound number chains (e.g., *"two hundred fifty grams of butter"* ➔ 250) and fractions (*"half a kilo"* ➔ 0.5kg).
 
-### ⏱️ Anti-Verschluck-Garantie (Staggering)
-Werden mehrere Artikel gleichzeitig angesagt, schickt das Skript diese nun mit 1,5 Sekunden Abstand an Bring. So geht garantiert nichts mehr verloren.
+### 🔠 Automatic Capitalization & Clean Quantity Separation
+The product name in Bring! is adopted with a capital first letter. Numbers and units are cleanly separated and land exactly in the `specification` (quantity) and `name` (product) fields in the Bring! app. No text mess!
 
-### 🛠️ Feinschliff & Bugfixes
-Das Skript reagiert nun auch auf wiederholte, identische Sätze, erkennt Trigger-Wörter wie "hinzu" und löscht hängende Cloud-Warteschleifen beim Adapter-Neustart sauber auf.
+### ☁️ Cloud Wait Loop (Dynamic Retry)
+Because the Amazon cloud often needs a few seconds to update the JSON in ioBroker, the adapter checks up to 5 times every 3 seconds whether the item has arrived. Only when it appears there is it cleanly removed from the Alexa list.
 
-### 🍳 Rezept-Auflösung (NEU)
-Du kannst in den Einstellungen deine Lieblingsrezepte hinterlegen (z.B. "Kuchen"). Sagst du *"Alexa, setze Kuchen auf die Einkaufsliste"*, werden automatisch die hinterlegten Zutaten (z.B. Mehl, Eier, Zucker) auf deine Liste gesetzt.
+### 🐛 Error Handling & Logging
+Every text transformation and filtering is individually secured. If Alexa's speech recognition delivers total gibberish, the adapter does not crash, but cleanly logs the error and simply sends the item to Bring! as raw text in an emergency fallback.
 
-### 🚫 Experten-Filter: Synonyme (NEU)
-- **Synonyme:** Tauscht deine umgangssprachlichen Begriffe (z.B. "Zewa") unsichtbar in Bring-kompatible Begriffe (z.B. "Küchenrolle") aus, damit das richtige Icon erscheint.
+### 💤 Resource Friendly
+No permanent JSON polling in the background. The adapter only triggers when you actually announce something via Alexa.
 
-### 🧠 Mathematischer Zahlen-Gesamt-Parser & Bruchzahlen
-Macht aus gesprochenen Wörtern echte Zahlen. Die Logik unterstützt auch komplexe, zusammengesetzte Zahlenketten (z. B. *"zwei hundert fünfzig gramm butter"* ➔ 250) und Bruchzahlen (*"ein halbes Kilo"* ➔ 0.5Kg). 
+## 🗣️ Example Sentences
 
-### 🔠 Automatische Groß-/Kleinschreibung & Saubere Mengentrennung
-Der Produktname in Bring! wird mit einem großen Anfangsbuchstaben übernommen. Zahlen und Einheiten werden sauber getrennt und landen in der Bring!-App exakt im Feld `specification` (Menge) und `name` (Produkt). Kein Textmatsch!
+To give you an idea of what's possible, here are a few sentences you can say to Alexa:
+- *"Alexa, put milk on the shopping list"* ➔ **Milk**
+- *"Alexa, add three crates of water"* ➔ **Water (3 crates)**
+- *"Alexa, put half a kilo of minced meat on the list"* ➔ **Minced meat (0.5 kg)**
+- *"Alexa, put apples and bananas on the shopping list"* ➔ **Apples**, **Bananas**
+- *"Alexa, write two hundred fifty grams of butter on the list"* ➔ **Butter (250 g)**
 
-### ☁️ Cloud-Warteschleife (Dynamic Retry)
-Weil die Amazon-Cloud oft ein paar Sekunden braucht, um das JSON im ioBroker zu aktualisieren, prüft der Adapter bis zu 5-mal alle 3 Sekunden nach, ob der Artikel angekommen ist. Erst wenn er dort auftaucht, wird er sauber von der Alexa-Liste entfernt.
+## ⚙️ Principle & Process
 
-### 🐛 Error-Handling & Logging
-Jede Texttransformation und Filterung ist einzeln abgesichert. Sollte die Spracherkennung von Alexa mal totalen Kauderwelsch liefern, stürzt der Adapter nicht ab, sondern loggt den Fehler sauber und schickt den Artikel im Notfall-Fallback einfach als Rohtext an Bring!.
+1. **Recognize:** You say: *"Alexa, put three bananas on the shopping list"*. The adapter reacts to the new text in your Alexa history (`alexa2.0.History.summary`).
+2. **Enter:** The adapter grabs the item, filters it (synonyms, recipes), formats it, and immediately sends it to your Bring! adapter.
+3. **Delete:** Since Alexa naturally still puts the item on its own list in parallel, the adapter waits briefly for the Amazon cloud. Then it searches the JSON of your Alexa shopping list, looks for the ID assigned by Amazon, and deletes the entry directly from the Alexa list.
+4. **Result:** The product lands perfectly in your Bring! app and your Alexa list is automatically cleaned up in the background.
 
-### 💤 Schont die Ressourcen
-Kein permanentes JSON-Dauer-Polling im Hintergrund. Der Adapter springt nur an, wenn du auch wirklich etwas über Alexa ansagst.
+## Changelog
+<!--
+  Placeholder for the next version (at the beginning of the line):
+  ### **WORK IN PROGRESS**
+-->
+### 0.0.7 (2026-07-02)
+* (Deconta) initial release
 
-## 🗣️ Beispielsätze
-
-Damit du eine Idee bekommst, was alles möglich ist, hier ein paar Sätze, die du zu Alexa sagen kannst:
-- *"Alexa, setze Milch auf die Einkaufsliste"* ➔ **Milch**
-- *"Alexa, füge drei Kisten Wasser hinzu"* ➔ **Wasser (3 Kisten)**
-- *"Alexa, packe ein halbes Kilo Hackfleisch auf die Liste"* ➔ **Hackfleisch (0.5 kg)**
-- *"Alexa, setze Äpfel und Bananen auf die Einkaufsliste"* ➔ **Äpfel**, **Bananen**
-- *"Alexa, schreibe zwei hundert fünfzig gramm butter auf die Liste"* ➔ **Butter (250 g)**
-
-## ⚙️ Prinzip & Ablauf
-
-1. **Erkennen:** Ihr sagt: *"Alexa, pack drei Bananen auf die Einkaufsliste"*. Der Adapter reagiert auf den neuen Text in eurem Alexa-Verlauf (`alexa2.0.History.summary`).
-2. **Eintragen:** Der Adapter schnappt sich den Artikel, filtert ihn (Synonyme, Rezepte), formatiert ihn und schickt ihn sofort an euren Bring!-Adapter.
-3. **Löschen:** Da Alexa den Artikel parallel natürlich trotzdem auf ihre eigene Liste setzt, wartet der Adapter kurz auf die Amazon-Cloud. Dann durchsucht er das JSON eurer Alexa-Einkaufsliste, sucht die von Amazon vergebene ID und löscht den Eintrag direkt von der Alexa-Liste.
-4. **Ergebnis:** Das Produkt landet perfekt in eurer Bring!-App und eure Alexa-Liste wird im Hintergrund automatisch bereinigt.
-
-### **IN ARBEIT (WORK IN PROGRESS)**
-* (Deconta) Erstveröffentlichung (02.07.2026)
-
-## Lizenz (License)
+## License
 MIT License
 
 Copyright (c) 2026 Deconta
