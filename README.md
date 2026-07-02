@@ -1,14 +1,7 @@
 ![Logo](admin/alexa-bring-bridge.png)
 # ioBroker.alexa-bring-bridge
 
-[![NPM version](https://img.shields.io/npm/v/iobroker.alexa-bring-bridge.svg)](https://www.npmjs.com/package/iobroker.alexa-bring-bridge)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.alexa-bring-bridge.svg)](https://www.npmjs.com/package/iobroker.alexa-bring-bridge)
-![Number of Installations](https://iobroker.live/badges/alexa-bring-bridge-installed.svg)
-![Current version in stable repository](https://iobroker.live/badges/alexa-bring-bridge-stable.svg)
 
-[![NPM](https://nodei.co/npm/iobroker.alexa-bring-bridge.png?downloads=true)](https://nodei.co/npm/iobroker.alexa-bring-bridge/)
-
-**Tests:** ![Test and Release](https://github.com/julian/ioBroker.alexa-bring-bridge/workflows/Test%20and%20Release/badge.svg)
 
 ## alexa-bring-bridge Adapter für ioBroker
 
