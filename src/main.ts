@@ -165,9 +165,9 @@ class AlexaBringBridge extends utils.Adapter {
                                 const deleteTimer = this.setTimeout(() => {
                                     void this.removeItemFromAlexaList(originalItemName, cleanResult.product);
                                 }, 4000);
-                                this.activeTimeouts.push(deleteTimer);
+                                if (deleteTimer) this.activeTimeouts.push(deleteTimer);
                             }, processingDelay);
-                            this.activeTimeouts.push(processTimer);
+                            if (processTimer) this.activeTimeouts.push(processTimer);
                         } else {
                             this.customDebug(`Item "${originalItemName}" is empty after cleaning. Ignoring.`);
                         }
@@ -424,7 +424,7 @@ class AlexaBringBridge extends utils.Adapter {
                         () => this.removeItemFromAlexaList(itemName, extractedProduct, attempt + 1),
                         retryDelay,
                     );
-                    this.activeTimeouts.push(timer);
+                    if (timer) this.activeTimeouts.push(timer);
                 }
                 return;
             }
@@ -465,7 +465,7 @@ class AlexaBringBridge extends utils.Adapter {
                         () => this.removeItemFromAlexaList(itemName, extractedProduct, attempt + 1),
                         retryDelay,
                     );
-                    this.activeTimeouts.push(timer);
+                    if (timer) this.activeTimeouts.push(timer);
                 } else {
                     this.log.debug(`Item was not found in JSON after ${maxAttempts} attempts.`);
                 }
