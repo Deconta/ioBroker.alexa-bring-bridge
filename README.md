@@ -43,8 +43,7 @@ Werden mehrere Artikel gleichzeitig angesagt, schickt das Skript diese nun mit 1
 ### 🍳 Rezept-Auflösung (NEU)
 Du kannst in den Einstellungen deine Lieblingsrezepte hinterlegen (z.B. "Kuchen"). Sagst du *"Alexa, setze Kuchen auf die Einkaufsliste"*, werden automatisch die hinterlegten Zutaten (z.B. Mehl, Eier, Zucker) auf deine Liste gesetzt.
 
-### 🚫 Experten-Filter: Blacklist & Synonyme (NEU)
-- **Blacklist:** Verhindert, dass unerwünschte Wörter (wie "Einkaufsliste") auf Bring! landen.
+### 🚫 Experten-Filter: Synonyme (NEU)
 - **Synonyme:** Tauscht deine umgangssprachlichen Begriffe (z.B. "Zewa") unsichtbar in Bring-kompatible Begriffe (z.B. "Küchenrolle") aus, damit das richtige Icon erscheint.
 
 ### 🧠 Mathematischer Zahlen-Gesamt-Parser & Bruchzahlen
@@ -59,7 +58,7 @@ Weil die Amazon-Cloud oft ein paar Sekunden braucht, um das JSON im ioBroker zu 
 ## ⚙️ Prinzip & Ablauf
 
 1. **Erkennen:** Ihr sagt: *"Alexa, pack drei Bananen auf die Einkaufsliste"*. Der Adapter reagiert auf den neuen Text in eurem Alexa-Verlauf (`alexa2.0.History.summary`).
-2. **Eintragen:** Der Adapter schnappt sich den Artikel, filtert ihn (Blacklist, Synonyme, Rezepte), formatiert ihn und schickt ihn sofort an euren Bring!-Adapter.
+2. **Eintragen:** Der Adapter schnappt sich den Artikel, filtert ihn (Synonyme, Rezepte), formatiert ihn und schickt ihn sofort an euren Bring!-Adapter.
 3. **Löschen:** Da Alexa den Artikel parallel natürlich trotzdem auf ihre eigene Liste setzt, wartet der Adapter kurz auf die Amazon-Cloud. Dann durchsucht er das JSON eurer Alexa-Einkaufsliste, sucht die von Amazon vergebene ID und löscht den Eintrag direkt von der Alexa-Liste.
 4. **Ergebnis:** Das Produkt landet perfekt in eurer Bring!-App und eure Alexa-Liste wird im Hintergrund automatisch bereinigt.
 

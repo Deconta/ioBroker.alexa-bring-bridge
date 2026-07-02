@@ -125,38 +125,9 @@
             "type": "panel",
             "label": "Experten-Filter",
             "items": {
-                "headerBlacklist": {
-                    "type": "header",
-                    "text": "1. Blacklist (Wörter ignorieren)",
-                    "size": 4,
-                    "sm": 12
-                },
-                "descBlacklist": {
-                    "type": "staticText",
-                    "text": "Wenn Alexa ein hier eingetragenes Wort erkennt, wird es komplett ignoriert und nicht an Bring gesendet.<br><br><b>Beispiele:</b><br>1. Wort: <i>Einkaufsliste</i> (Verhindert fehlerhafte Einträge, wenn Alexa den Satz falsch trennt)<br>2. Wort: <i>Test</i>",
-                    "style": { "marginBottom": "10px" },
-                    "sm": 12
-                },
-                "blacklist": {
-                    "type": "table",
-                    "label": "Blacklist",
-                    "items": [
-                        {
-                            "type": "text",
-                            "attr": "word",
-                            "label": "Wort (z.B. Einkaufsliste)"
-                        }
-                    ],
-                    "sm": 12
-                },
-                "dividerExp": {
-                    "type": "divider",
-                    "style": { "marginTop": "30px", "marginBottom": "20px" },
-                    "sm": 12
-                },
                 "headerSynonyms": {
                     "type": "header",
-                    "text": "2. Synonyme (Wörter ersetzen)",
+                    "text": "1. Synonyme (Wörter ersetzen)",
                     "size": 4,
                     "sm": 12
                 },

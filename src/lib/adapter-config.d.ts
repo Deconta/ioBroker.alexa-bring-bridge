@@ -11,7 +11,6 @@ declare global {
             alexaHistorySerialId: string;
             enableDebug: boolean;
             recipesList: { name: string; ingredients: string }[];
-            blacklist: { word: string }[];
             synonymsList: { original: string; replacement: string }[];
         }
     }

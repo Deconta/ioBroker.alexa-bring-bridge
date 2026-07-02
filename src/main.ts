@@ -106,18 +106,7 @@ class AlexaBringBridge extends utils.Adapter {
                     itemsToProcess.forEach(async (singleItemRaw, index) => {
                         let itemToProcess = singleItemRaw.trim();
 
-                        // 1. Blacklist-Check
-                        const isBlacklisted = this.config.blacklist?.some(
-                            b => b.word.toLowerCase() === itemToProcess.toLowerCase(),
-                        );
-                        if (isBlacklisted) {
-                            this.customDebug(
-                                `Experten-Filter: Artikel "${itemToProcess}" steht auf der Blacklist und wird ignoriert.`,
-                            );
-                            return; // überspringt dieses Item
-                        }
-
-                        // 2. Synonym-Check
+                        // 1. Synonym-Check
                         const synonymMatch = this.config.synonymsList?.find(
                             s => s.original.toLowerCase() === itemToProcess.toLowerCase(),
                         );

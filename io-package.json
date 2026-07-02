@@ -88,7 +88,6 @@
         "alexaHistorySerialId": "alexa2.0.History.serialNumber",
         "enableDebug": false,
         "recipesList": [],
-        "blacklist": [],
         "synonymsList": []
     },
     "objects": [],
