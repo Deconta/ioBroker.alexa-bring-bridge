@@ -10,6 +10,7 @@
   "homepage": "https://github.com/Deconta/ioBroker.alexa-bring-bridge",
   "license": "MIT",
   "keywords": [
+    "ioBroker",
     "template",
     "automation",
     "IoT",
