@@ -21,19 +21,19 @@
                 "bringBaseId": {
                     "type": "objectId",
                     "label": "Bring! Base ID (z.B. bring.0.UUID)",
-                    "types": ["state", "channel", "device", "folder"],
                     "newLine": true,
                     "xs": 12,
                     "sm": 12,
                     "md": 6
                 },
-                
                 "divider1": {
                     "type": "divider",
-                    "style": { "marginTop": "20px", "marginBottom": "20px" },
+                    "style": {
+                        "marginTop": "20px",
+                        "marginBottom": "20px"
+                    },
                     "sm": 12
                 },
-                
                 "headerAlexa": {
                     "type": "header",
                     "text": "2. Amazon Alexa Schnittstelle",
@@ -48,7 +48,6 @@
                 "alexa2BaseId": {
                     "type": "objectId",
                     "label": "Alexa2 Base ID for Shopping List",
-                    "types": ["state", "channel", "device", "folder"],
                     "newLine": true,
                     "xs": 12,
                     "sm": 12,
@@ -58,7 +57,6 @@
                 "alexaHistorySummaryId": {
                     "type": "objectId",
                     "label": "Alexa2 History Summary ID",
-                    "types": ["state", "channel", "device", "folder"],
                     "newLine": false,
                     "xs": 12,
                     "sm": 12,
@@ -68,7 +66,6 @@
                 "alexaHistoryAnswerId": {
                     "type": "objectId",
                     "label": "Alexa2 History Answer ID",
-                    "types": ["state", "channel", "device", "folder"],
                     "newLine": true,
                     "xs": 12,
                     "sm": 12,
@@ -78,7 +75,6 @@
                 "alexaHistorySerialId": {
                     "type": "objectId",
                     "label": "Alexa2 History Serial Number ID",
-                    "types": ["state", "channel", "device", "folder"],
                     "newLine": false,
                     "xs": 12,
                     "sm": 12,
@@ -100,7 +96,9 @@
                 "descRecipes": {
                     "type": "staticText",
                     "text": "Trage hier deine Lieblingsrezepte ein. Wenn du den Rezeptnamen über Alexa hinzufügst, werden automatisch die hier hinterlegten Einzelzutaten auf die Einkaufsliste gesetzt.<br><br><b>Beispiel:</b><br>Name: <i>Kuchen</i><br>Zutaten: <i>Mehl, Eier, Zucker</i>",
-                    "style": { "marginBottom": "20px" },
+                    "style": {
+                        "marginBottom": "20px"
+                    },
                     "sm": 12
                 },
                 "recipesList": {
@@ -134,7 +132,9 @@
                 "descSynonyms": {
                     "type": "staticText",
                     "text": "Hier kannst du festlegen, dass bestimmte Wörter ausgetauscht werden, bevor sie an Bring gesendet werden.<br><br><b>Beispiele:</b><br>1. Original: <i>Zewa</i> ➔ Ersatz: <i>Küchenrolle</i><br>2. Original: <i>Schoki</i> ➔ Ersatz: <i>Schokolade</i>",
-                    "style": { "marginBottom": "10px" },
+                    "style": {
+                        "marginBottom": "10px"
+                    },
                     "sm": 12
                 },
                 "synonymsList": {
