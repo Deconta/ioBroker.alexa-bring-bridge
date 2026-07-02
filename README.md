@@ -70,3 +70,5 @@ Weil die Amazon-Cloud oft ein paar Sekunden braucht, um das JSON im ioBroker zu 
 MIT License
 
 Copyright (c) 2026 Deconta <Deconta@example.com>
+
+[Older changelogs can be found there](CHANGELOG_OLD.md)
