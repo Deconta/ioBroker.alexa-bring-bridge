@@ -70,3 +70,9 @@ Weil die Amazon-Cloud oft ein paar Sekunden braucht, um das JSON im ioBroker zu 
 MIT License
 
 Copyright (c) 2026 Deconta <Deconta@example.com>
+
+## Changelog
+
+### **WORK IN PROGRESS**
+- (ioBroker-Bot) Adapter requires admin >= 7.8.23 now.
+
