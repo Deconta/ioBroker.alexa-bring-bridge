@@ -1,0 +1,214 @@
+{
+    "i18n": true,
+    "type": "tabs",
+    "items": {
+        "main": {
+            "type": "panel",
+            "label": "Settings",
+            "icon": "alexa-bring-bridge.png",
+            "items": {
+                "headerBring": {
+                    "type": "header",
+                    "text": "1. Bring! Integration",
+                    "size": 4,
+                    "sm": 12
+                },
+                "descBring": {
+                    "type": "staticText",
+                    "text": "Wähle hier die Hauptliste (UUID-Ordner) deiner Bring-Instanz, auf die die Artikel geschrieben werden sollen.",
+                    "sm": 12
+                },
+                "bringBaseId": {
+                    "type": "objectId",
+                    "label": "Bring! Base ID (z.B. bring.0.UUID)",
+                    "types": ["state", "channel", "device", "folder"],
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6
+                },
+                
+                "divider1": {
+                    "type": "divider",
+                    "style": { "marginTop": "20px", "marginBottom": "20px" },
+                    "sm": 12
+                },
+                
+                "headerAlexa": {
+                    "type": "header",
+                    "text": "2. Amazon Alexa Schnittstelle",
+                    "size": 4,
+                    "sm": 12
+                },
+                "descAlexa": {
+                    "type": "staticText",
+                    "text": "Diese IDs verknüpfen den Adapter mit dem Alexa2-Adapter, um neue Einkäufe abzufangen.",
+                    "sm": 12
+                },
+                "alexa2BaseId": {
+                    "type": "objectId",
+                    "label": "Alexa2 Base ID for Shopping List",
+                    "types": ["state", "channel", "device", "folder"],
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "help": "Der Ordner deiner Alexa-Einkaufsliste (z.B. alexa2.0.Lists.SHOP)"
+                },
+                "alexaHistorySummaryId": {
+                    "type": "objectId",
+                    "label": "Alexa2 History Summary ID",
+                    "types": ["state", "channel", "device", "folder"],
+                    "newLine": false,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "help": "Der Datenpunkt für den gesprochenen Text (z.B. alexa2.0.History.summary)"
+                },
+                "alexaHistoryAnswerId": {
+                    "type": "objectId",
+                    "label": "Alexa2 History Answer ID",
+                    "types": ["state", "channel", "device", "folder"],
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "help": "Der Datenpunkt für die Alexa-Antwort (z.B. alexa2.0.History.answerText)"
+                },
+                "alexaHistorySerialId": {
+                    "type": "objectId",
+                    "label": "Alexa2 History Serial Number ID",
+                    "types": ["state", "channel", "device", "folder"],
+                    "newLine": false,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "help": "Der Datenpunkt für die Seriennummer des angesprochenen Echos (z.B. alexa2.0.History.serialNumber)"
+                }
+            }
+        },
+        "recipes": {
+            "type": "panel",
+            "label": "Rezepte",
+            "items": {
+                "headerRecipes": {
+                    "type": "header",
+                    "text": "Rezept-Auflösung",
+                    "size": 4,
+                    "sm": 12
+                },
+                "descRecipes": {
+                    "type": "staticText",
+                    "text": "Trage hier deine Lieblingsrezepte ein. Wenn du den Rezeptnamen über Alexa hinzufügst, werden automatisch die hier hinterlegten Einzelzutaten auf die Einkaufsliste gesetzt.<br><br><b>Beispiel:</b><br>Name: <i>Kuchen</i><br>Zutaten: <i>Mehl, Eier, Zucker</i>",
+                    "style": { "marginBottom": "20px" },
+                    "sm": 12
+                },
+                "recipesList": {
+                    "type": "table",
+                    "label": "Rezept-Tabelle",
+                    "items": [
+                        {
+                            "type": "text",
+                            "attr": "name",
+                            "label": "Rezeptname (z.B. Pfannkuchen)"
+                        },
+                        {
+                            "type": "text",
+                            "attr": "ingredients",
+                            "label": "Zutaten (kommagetrennt, z.B. Mehl, Eier, Milch)"
+                        }
+                    ]
+                }
+            }
+        },
+        "experten": {
+            "type": "panel",
+            "label": "Experten-Filter",
+            "items": {
+                "headerBlacklist": {
+                    "type": "header",
+                    "text": "1. Blacklist (Wörter ignorieren)",
+                    "size": 4,
+                    "sm": 12
+                },
+                "descBlacklist": {
+                    "type": "staticText",
+                    "text": "Wenn Alexa ein hier eingetragenes Wort erkennt, wird es komplett ignoriert und nicht an Bring gesendet.<br><br><b>Beispiele:</b><br>1. Wort: <i>Einkaufsliste</i> (Verhindert fehlerhafte Einträge, wenn Alexa den Satz falsch trennt)<br>2. Wort: <i>Test</i>",
+                    "style": { "marginBottom": "10px" },
+                    "sm": 12
+                },
+                "blacklist": {
+                    "type": "table",
+                    "label": "Blacklist",
+                    "items": [
+                        {
+                            "type": "text",
+                            "attr": "word",
+                            "label": "Wort (z.B. Einkaufsliste)"
+                        }
+                    ],
+                    "sm": 12
+                },
+                "dividerExp": {
+                    "type": "divider",
+                    "style": { "marginTop": "30px", "marginBottom": "20px" },
+                    "sm": 12
+                },
+                "headerSynonyms": {
+                    "type": "header",
+                    "text": "2. Synonyme (Wörter ersetzen)",
+                    "size": 4,
+                    "sm": 12
+                },
+                "descSynonyms": {
+                    "type": "staticText",
+                    "text": "Hier kannst du festlegen, dass bestimmte Wörter ausgetauscht werden, bevor sie an Bring gesendet werden.<br><br><b>Beispiele:</b><br>1. Original: <i>Zewa</i> ➔ Ersatz: <i>Küchenrolle</i><br>2. Original: <i>Schoki</i> ➔ Ersatz: <i>Schokolade</i>",
+                    "style": { "marginBottom": "10px" },
+                    "sm": 12
+                },
+                "synonymsList": {
+                    "type": "table",
+                    "label": "Synonym-Tabelle",
+                    "items": [
+                        {
+                            "type": "text",
+                            "attr": "original",
+                            "label": "Original (gesprochen)"
+                        },
+                        {
+                            "type": "text",
+                            "attr": "replacement",
+                            "label": "Ersatzwort (für Bring!)"
+                        }
+                    ],
+                    "sm": 12
+                }
+            }
+        },
+        "logging": {
+            "type": "panel",
+            "label": "Logging",
+            "items": {
+                "headerLog": {
+                    "type": "header",
+                    "text": "Diagnose & Fehlersuche",
+                    "size": 4,
+                    "sm": 12
+                },
+                "descLog": {
+                    "type": "staticText",
+                    "text": "Hier kannst du erweiterte Logs aktivieren, wenn du überprüfen willst, was der Adapter genau tut.",
+                    "sm": 12
+                },
+                "enableDebug": {
+                    "type": "checkbox",
+                    "label": "Erweiterte Debug-Logs direkt ins normale Info-Log schreiben",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12
+                }
+            }
+        }
+    }
+}

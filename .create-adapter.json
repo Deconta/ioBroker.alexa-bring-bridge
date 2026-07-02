@@ -1,0 +1,42 @@
+{
+    "cli": true,
+    "features": [
+        "adapter"
+    ],
+    "adminFeatures": [
+        "jsonConfig"
+    ],
+    "adapterName": "alexa-bring-bridge",
+    "title": "Alexa Bring Bridge",
+    "desc": "Alexa Voice-Input to Bring! List Pushing Engine",
+    "language": "TypeScript",
+    "quotes": "single",
+    "indentation": "Space (4)",
+    "es6class": "yes",
+    "authorName": "Julian",
+    "authorGithub": "julian",
+    "authorEmail": "julian@example.com",
+    "gitRemote": "https://github.com/julian/ioBroker.alexa-bring-bridge",
+    "ci": "none",
+    "type": "general",
+    "replay": "E:\\AI\\Coding\\alexa-bring-bridge\\.create-adapter.json",
+    "expert": "",
+    "startMode": "daemon",
+    "connectionType": "",
+    "dataSource": "",
+    "connectionIndicator": "no",
+    "nodeVersion": "20",
+    "adminUi": "json",
+    "tools": [
+        "ESLint"
+    ],
+    "eslintConfig": "official",
+    "releaseScript": "yes",
+    "devServer": "local",
+    "gitRemoteProtocol": "HTTPS",
+    "gitCommit": "no",
+    "defaultBranch": "main",
+    "license": "MIT License",
+    "dependabot": "yes",
+    "creatorVersion": "3.1.5"
+}

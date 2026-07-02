@@ -1,0 +1,96 @@
+{
+    "common": {
+        "name": "alexa-bring-bridge",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "titleLang": {
+            "en": "Alexa Bring Bridge",
+            "de": "Alexa Bring Bridge",
+            "ru": "Алекса Бридж Бридж",
+            "pt": "Alexa traz ponte",
+            "nl": "Alexa Breng Bridge",
+            "fr": "Alexa apporte le pont",
+            "it": "Alexa porta il ponte",
+            "es": "Alexa trae puente",
+            "pl": "Alexa Bring Bridge",
+            "uk": "Alexa Bring Bridge",
+            "zh-cn": "Alexa 布林桥"
+        },
+        "desc": {
+            "en": "alexa-bring-bridge",
+            "de": "Alexa-bring-bridge",
+            "ru": "Алекса-принеси-мост",
+            "pt": "alexa-trazer-ponte",
+            "nl": "alexa-bring-bridge",
+            "fr": "alexa-apporte-pont",
+            "it": "Alexa, porta bridge",
+            "es": "alexa-traer-puente",
+            "pl": "alexa-bring-bridge",
+            "uk": "alexa-bring-bridge",
+            "zh-cn": "Alexa 带来桥"
+        },
+        "authors": [
+            "Julian <julian@example.com>"
+        ],
+        "keywords": [
+            "template",
+            "automation",
+            "IoT",
+            "integration"
+        ],
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "platform": "Javascript/Node.js",
+        "icon": "alexa-bring-bridge.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/julian/ioBroker.alexa-bring-bridge/main/admin/alexa-bring-bridge.png",
+        "readme": "https://github.com/julian/ioBroker.alexa-bring-bridge/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "mode": "daemon",
+        "type": "general",
+        "compact": true,
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=6.0.11"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=7.0.23"
+            }
+        ]
+    },
+    "native": {
+        "bringBaseId": "bring.0.d0ded82a-de03-49e0-b64b-5574c3e34fbc",
+        "alexa2BaseId": "alexa2.0.Lists.SHOP",
+        "alexaHistorySummaryId": "alexa2.0.History.summary",
+        "alexaHistoryAnswerId": "alexa2.0.History.answerText",
+        "alexaHistorySerialId": "alexa2.0.History.serialNumber",
+        "enableDebug": false,
+        "recipesList": [],
+        "blacklist": [],
+        "synonymsList": []
+    },
+    "objects": [],
+    "instanceObjects": []
+}
