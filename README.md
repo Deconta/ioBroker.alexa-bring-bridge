@@ -1,17 +1,42 @@
 ![Logo](admin/alexa-bring-bridge.png)
 # ioBroker.alexa-bring-bridge
 
+[![NPM version](https://img.shields.io/npm/v/iobroker.alexa-bring-bridge.svg)](https://www.npmjs.com/package/iobroker.alexa-bring-bridge)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.alexa-bring-bridge.svg)](https://www.npmjs.com/package/iobroker.alexa-bring-bridge)
+![Number of Installations](https://iobroker.live/badges/alexa-bring-bridge-installed.svg)
+![Current version in stable repository](https://iobroker.live/badges/alexa-bring-bridge-stable.svg)
 
+[![NPM](https://nodei.co/npm/iobroker.alexa-bring-bridge.png?downloads=true)](https://nodei.co/npm/iobroker.alexa-bring-bridge/)
+
+**Tests:** ![Test and Release](https://github.com/julian/ioBroker.alexa-bring-bridge/workflows/Test%20and%20Release/badge.svg)
 
 ## alexa-bring-bridge Adapter für ioBroker
 
 Der **alexa-bring-bridge** Adapter ist eine clevere, vollautomatische Brücke zwischen Amazon Alexa und deiner Bring! Einkaufsliste. 
 Er fängt alles ab, was du Alexa diktierst, filtert und säubert die Eingaben intelligent, fügt sie auf deiner Bring! Liste hinzu und löscht sie anschließend vollautomatisch wieder im Hintergrund von deiner Alexa-Liste auf Amazon.
 
+## 📦 Voraussetzungen
+
+Bevor du diesen Adapter nutzen kannst, müssen folgende Adapter in deinem ioBroker installiert und konfiguriert sein:
+1. **[Alexa2 Adapter](https://github.com/Apollon77/ioBroker.alexa2):** Vollständig eingerichtet und mit deinem Amazon-Konto verbunden.
+2. **[Bring! Adapter](https://github.com/foxriver76/ioBroker.bring):** Vollständig eingerichtet und mit deinem Bring!-Konto verbunden.
+
+## 🛠️ Installation (Beta via GitHub)
+
+Da der Adapter ganz neu ist, kannst du ihn aktuell direkt hier über GitHub installieren:
+
+1. Öffne die ioBroker-Oberfläche und gehe zum Reiter **"Adapter"**.
+2. Klicke oben auf das **GitHub-Symbol** (Installieren aus eigener URL / Install from custom URL).
+3. Wähle im Tab "Benutzerdefiniert" (Custom) aus.
+4. Trage bei URL diesen Link ein: `https://github.com/Deconta/ioBroker.alexa-bring-bridge`
+5. Klicke auf **Installieren**.
+6. Nach der Installation klickst du auf **Instanz hinzufügen** (das dicke Plus).
+7. Konfiguriere die Instanz, indem du im Einstellungsmenü die entsprechenden Bring- und Alexa-Datenpunkte über das kleine Listen-Icon bequem auswählst.
+
 ## 🌟 Funktionen
 
 ### 🚀 Multi-Item-Support (Großeinkäufe)
-Sagt ihr z. B. *"Alexa, füge Äpfel und Bananen hinzu"*, zerschneidet der Adapter den Satz ab sofort automatisch bei jedem "und" oder Komma. Er schickt **getrennte Artikel** an Bring! und löscht auch alle einzeln bei Alexa.
+Sagt ihr z. B. *"Alexa, füge Äpfel und Bananen hinzu"*, zerschneidet der Adapter den Satz ab sofort automatisch bei jedem "und". Er schickt **getrennte Artikel** an Bring! und löscht auch alle einzeln bei Alexa.
 
 ### 🧮 Intelligenter Mengen-Addierer
 Wenn ihr schon *"2 Flaschen Bier"* auf der Liste habt und später *"Schreibe zwei Flaschen Bier auf die Liste"* sagt, liest der Adapter die aktuelle Bring-Liste aus und rechnet zusammen ➔ Es landen **"Bier, 4 Flaschen"** in der App!
