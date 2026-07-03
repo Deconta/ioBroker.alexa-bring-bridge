@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "alexa-bring-bridge",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "news": {
             "0.0.1": {
                 "en": "initial release",
@@ -42,7 +42,7 @@
                 "uk": "Початкова версія",
                 "zh-cn": "首次出版"
             },
-            "0.0.12": {
+            "0.0.13": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",
                 "ru": "Начальная версия",
