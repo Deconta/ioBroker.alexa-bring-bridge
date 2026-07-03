@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "alexa-bring-bridge",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "news": {
             "0.0.1": {
                 "en": "initial release",
@@ -30,6 +30,19 @@
                 "zh-cn": "首次出版"
             },
             "0.0.8": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            },
+            "0.0.9": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",
                 "ru": "Начальная версия",
@@ -98,9 +111,6 @@
         "dependencies": [
             {
                 "js-controller": ">=6.0.11"
-            },
-            {
-                "admin": ">= 7.6.17"
             }
         ],
         "globalDependencies": [

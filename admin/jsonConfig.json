@@ -149,7 +149,12 @@
                             "attr": "ingredients",
                             "label": "Zutaten (kommagetrennt, z.B. Mehl, Eier, Milch)"
                         }
-                    ]
+                    ],
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 }
             }
         },
@@ -194,7 +199,11 @@
                             "label": "Ersatzwort (für Bring!)"
                         }
                     ],
-                    "sm": 12
+                    "sm": 12,
+                    "xs": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
                 }
             }
         },
@@ -227,7 +236,9 @@
                     "newLine": true,
                     "xs": 12,
                     "sm": 12,
-                    "md": 12
+                    "md": 12,
+                    "lg": 6,
+                    "xl": 4
                 }
             }
         }
