@@ -75,7 +75,7 @@ To give you an idea of what's possible, here are a few sentences you can say to 
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-### 0.0.13 (2026-07-03)
+### 0.0.14 (2026-07-03)
 * (Deconta) update configurations and versions
 
 ### 0.0.8 (2026-07-02)
